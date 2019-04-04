@@ -1,0 +1,68 @@
+Last login: Thu Apr  4 21:28:34 on ttys004
+Irhas-MBP:890 apple$  ssh -i 45557594.pem ubuntu@ec2-13-55-205-38.ap-southeast-2.compute.amazonaws.com
+Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-1032-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Apr  4 10:29:12 UTC 2019
+
+  System load:  0.0               Processes:           94
+  Usage of /:   25.0% of 7.69GB   Users logged in:     1
+  Memory usage: 21%               IP address for eth0: 172.31.24.74
+  Swap usage:   0%
+
+ * Ubuntu's Kubernetes 1.14 distributions can bypass Docker and use containerd
+   directly, see https://bit.ly/ubuntu-containerd or try it now with
+
+     snap install microk8s --classic
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+37 packages can be updated.
+0 updates are security updates.
+
+
+*** System restart required ***
+Last login: Thu Apr  4 10:21:07 2019 from 1.129.107.164
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+
+ubuntu@ip-172-31-24-74:~$ 
+ubuntu@ip-172-31-24-74:~$ car dricciardo.txt
+
+Command 'car' not found, but can be installed with:
+
+sudo apt install ucommon-utils
+
+ubuntu@ip-172-31-24-74:~$ cat dricciardo.txt
+daniel ricciardo avocado 
+hydrogenase what are you
+dehydrogenase what are you
+hydrogenase and dehydrogenase what are you 
+-1 -2 -3 -4
+1 2 3 4
+1.2 2.3 3.4 4.5 
+
+ubuntu@ip-172-31-24-74:~$ grep -Ew 'hy' dricciardo.txt | grep -vEw 'dhy'
+ubuntu@ip-172-31-24-74:~$ grep -Ew 'hy' dricciardo.txt | grep -vEw 'dhy' dricciardo.txt
+daniel ricciardo avocado 
+hydrogenase what are you
+dehydrogenase what are you
+hydrogenase and dehydrogenase what are you 
+-1 -2 -3 -4
+1 2 3 4
+1.2 2.3 3.4 4.5 
+
+ubuntu@ip-172-31-24-74:~$ grep -Ew 'hy' dricciardo.txt | grep -vEw 'dhy'
+ubuntu@ip-172-31-24-74:~$ grep -Ew 'hy' dricciardo.txt | grep -vEw 'dhy' dricciardo.txfvint
+grep: dricciardo.txfvint: No such file or directory
+ubuntu@ip-172-31-24-74:~$ egrep -o '[[:space:]][-0-9]+\.[0-9]+[[:space:]]'dricciardo.txt
+

@@ -1,0 +1,31 @@
+Last login: Thu Apr  4 16:52:38 on ttys001
+Irhas-MacBook-Pro:890 apple$ scp -i 45557594.pem tutes.txt ubuntu@ec2-13-55-205-38.ap-southeast-2.compute.amazonaws.com:
+tutes.txt                                     100%   15KB   1.2MB/s   00:00    
+Irhas-MacBook-Pro:890 apple$ cat tutes.txt | uniq -c | sort
+   1 [Tutorial_1|TUE|04:00PM|C06]
+   1 [Tutorial_1|WED|04:00PM|C13]
+   1 [Tutorial_1|WED|04:00PM|C14]
+   1 [Tutorial_1|WED|05:00PM|C15]
+   1 [Tutorial_1|WED|10:00AM|C09]
+   1 [Tutorial_1|WED|10:00AM|C10]
+   2 [Tutorial_1|TUE|02:00PM|C01]
+  25 [Tutorial_1|FRI|06:00PM|C19]
+  25 [Tutorial_1|FRI|06:00PM|C20]
+  27 [Tutorial_1|FRI|02:00PM|C16]
+  27 [Tutorial_1|FRI|03:00PM|C18]
+  27 [Tutorial_1|TUE|05:00PM|C12]
+  28 [Tutorial_1|MON|01:00PM|C04]
+  28 [Tutorial_1|MON|06:00PM|C01]
+  28 [Tutorial_1|MON|11:00AM|C06]
+  28 [Tutorial_1|TUE|05:00PM|C11]
+  29 [Tutorial_1|FRI|01:00PM|C13]
+  29 [Tutorial_1|FRI|01:00PM|C14]
+  29 [Tutorial_1|FRI|03:00PM|C17]
+  29 [Tutorial_1|MON|11:00AM|C05]
+  29 [Tutorial_1|TUE|03:00PM|C07]
+  29 [Tutorial_1|TUE|03:00PM|C08]
+  29 [Tutorial_1|TUE|04:00PM|C10]
+  30 [Tutorial_1|FRI|02:00PM|C15]
+  30 [Tutorial_1|MON|01:00PM|C03]
+  30 [Tutorial_1|TUE|04:00PM|C09]
+Irhas-MacBook-Pro:890 apple$ 

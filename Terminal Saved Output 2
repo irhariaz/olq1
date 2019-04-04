@@ -1,0 +1,122 @@
+Last login: Thu Apr  4 20:49:25 on ttys002
+Irhas-MacBook-Pro:890 apple$ cat dricciardo.txt
+daniel ricciardo avocado 
+hydrogenase what are you
+dehydrogenase what are you
+hydrogenase and dehydrogenase what are you bro
+-1 -2 -3
+1 2 3
+0.5 1.5 2.5 
+
+Irhas-MacBook-Pro:890 apple$ egrep '^\w+\s+\w+\s+\w+s$' dricciardo.txt
+Irhas-MacBook-Pro:890 apple$ nano dricciardo.txt
+Irhas-MacBook-Pro:890 apple$ egrep '^\w+\s+\w+\s+\w+$' dricciardo.txt
+Irhas-MacBook-Pro:890 apple$  ssh -i 45557594.pem ubuntu@ec2-13-55-205-38.ap-southeast-2.compute.amazonaws.com
+Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-1032-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Apr  4 10:06:46 UTC 2019
+
+  System load:  0.0               Processes:           88
+  Usage of /:   25.0% of 7.69GB   Users logged in:     0
+  Memory usage: 20%               IP address for eth0: 172.31.24.74
+  Swap usage:   0%
+
+ * Ubuntu's Kubernetes 1.14 distributions can bypass Docker and use containerd
+   directly, see https://bit.ly/ubuntu-containerd or try it now with
+
+     snap install microk8s --classic
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+37 packages can be updated.
+0 updates are security updates.
+
+
+*** System restart required ***
+Last login: Thu Apr  4 05:54:24 2019 from 137.111.13.126
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-24-74:~$ cat dricciardo.txt
+cat: dricciardo.txt: No such file or directory
+ubuntu@ip-172-31-24-74:~$ nano dricciardo.txt
+ubuntu@ip-172-31-24-74:~$ cat dricciardo.txt
+daniel ricciardo avocado 
+hydrogenase what are you
+dehydrogenase what are you
+hydrogenase and dehydrogenase what are you 
+-1 -2 -3 -4
+1 2 3 4
+1.2 2.3 3.4 4.5 
+
+ubuntu@ip-172-31-24-74:~$ egrep '^\w+\s+\w+\s+\w+$' dricciardo.txt
+ubuntu@ip-172-31-24-74:~$ ls
+dricciardo.txt  tutes.txt
+ubuntu@ip-172-31-24-74:~$ grep -packet_write_wait: Connection to 13.55.205.38 port 22: Broken pipe
+Irhas-MacBook-Pro:890 apple$  ssh -i 45557594.pem ubuntu@ec2-13-55-205-38.ap-southeast-2.compute.amazonaws.com^
+ssh: Could not resolve hostname ec2-13-55-205-38.ap-southeast-2.compute.amazonaws.com^: nodename nor servname provided, or not known
+Irhas-MacBook-Pro:890 apple$  ssh -i 45557594.pem ubuntu@ec2-13-55-205-38.ap-southeast-2.compute.amazonaws.com
+Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-1032-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Apr  4 10:21:06 UTC 2019
+
+  System load:  0.0               Processes:           91
+  Usage of /:   25.0% of 7.69GB   Users logged in:     1
+  Memory usage: 20%               IP address for eth0: 172.31.24.74
+  Swap usage:   0%
+
+ * Ubuntu's Kubernetes 1.14 distributions can bypass Docker and use containerd
+   directly, see https://bit.ly/ubuntu-containerd or try it now with
+
+     snap install microk8s --classic
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+37 packages can be updated.
+0 updates are security updates.
+
+
+*** System restart required ***
+Last login: Thu Apr  4 10:06:47 2019 from 137.111.13.126
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-24-74:~$ 
+ubuntu@ip-172-31-24-74:~$ cat dricciardo.txt
+daniel ricciardo avocado 
+hydrogenase what are you
+dehydrogenase what are you
+hydrogenase and dehydrogenase what are you 
+-1 -2 -3 -4
+1 2 3 4
+1.2 2.3 3.4 4.5 
+
+ubuntu@ip-172-31-24-74:~$ grep -E "^[0-9]+" dricciardo.txt | grep -vE [.]
+1 2 3 4
+ubuntu@ip-172-31-24-74:~$ grep '^\w+\s+\w+\s+\w+$' dricciardo.txt
+ubuntu@ip-172-31-24-74:~$ egrep -o '[[:space:]][-0-9]+\.[0-9]+[[:space:]] dricciardo.txt
+> 
+> dvkn
+> 
+> 
+> 
+> 
+> 
